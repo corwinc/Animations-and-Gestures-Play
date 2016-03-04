@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Gkl-Rv-kyC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animations_and_Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="WB7-fy-qYc" userLabel="totoro">
+                                <rect key="frame" x="55" y="403" width="211" height="196"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NrE-FM-lmj">
+                                        <rect key="frame" x="0.0" y="0.0" width="211" height="196"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="onTotoraTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Em5-da-UFO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.25882352939999997" green="0.69019607839999997" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view contentMode="scaleToFill" id="zRt-uZ-QZC" userLabel="mr clean">
+                                <rect key="frame" x="40" y="42" width="241" height="124"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71032280690000005" green="1" blue="0.94905403779999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mrCleanImageView" destination="zRt-uZ-QZC" id="ach-VG-jJR"/>
+                        <outlet property="totoroImageView" destination="WB7-fy-qYc" id="fVr-QO-rUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="340"/>
+        </scene>
+        <!--Gesture View Controller-->
+        <scene sceneID="II2-mJ-yp1">
+            <objects>
+                <viewController id="Gkl-Rv-kyC" customClass="GestureViewController" customModule="Animations_and_Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ugi-4I-1sf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="o5V-Vg-FlV">
+                                <rect key="frame" x="61" y="408" width="199" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.85046370510000002" blue="0.9473281013" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="lvw-kG-ymL">
+                                <rect key="frame" x="40" y="31" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.49716944048462297" blue="0.36005018577670778" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Zek-Pi-jx7" appends="YES" id="E91-B3-xxX"/>
+                                    <outletCollection property="gestureRecognizers" destination="fQ4-oo-PU6" appends="YES" id="Sgw-g2-Hcc"/>
+                                    <outletCollection property="gestureRecognizers" destination="z0A-rX-OSs" appends="YES" id="SZI-eR-VX6"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mrCleanImageView" destination="lvw-kG-ymL" id="RAG-FC-YIH"/>
+                        <outlet property="totoroImageView" destination="o5V-Vg-FlV" id="d0Q-Zg-0h2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63J-q5-zQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="fQ4-oo-PU6">
+                    <connections>
+                        <action selector="didTap:" destination="Gkl-Rv-kyC" id="N4w-Q9-u6g"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Zek-Pi-jx7">
+                    <connections>
+                        <action selector="didPan:" destination="Gkl-Rv-kyC" id="ZQW-Vy-XfL"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="z0A-rX-OSs">
+                    <connections>
+                        <action selector="didPinch:" destination="Gkl-Rv-kyC" id="kXh-y9-74z"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="819" y="340"/>
+        </scene>
+    </scenes>
+</document>
